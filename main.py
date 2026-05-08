@@ -24,9 +24,18 @@ def tela_cadastro(request:Request):
     )
 #Tela de login
 @app.get("/login")
-def tela_cadastro(request:Request):
+def tela_login(request:Request):
     return templates.TemplateResponse(
         request,
         "login.html",
+        {"request": request}
+    )
+
+#Tela inicial
+@app.get("/")
+def tela_inicial(request:Request):
+    return templates.TemplateResponse(
+        request,
+        "index.html",
         {"request": request}
     )

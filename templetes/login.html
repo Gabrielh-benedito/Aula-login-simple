@@ -3,19 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login | SENAI</title>
+    <style>
+        /* Estilização baseada na identidade visual SENAI */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 350px;
+            border-top: 6px solid #005594; /* Azul Padrão SENAI */
+        }
+
+        h1 {
+            color: #005594;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #005594;
+            box-shadow: 0 0 5px rgba(0, 85, 148, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #005594;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #003d6b;
+        }
+
+        .options {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-link {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+            color: #E30613; /* Vermelho detalhe para destaque */
+        }
+
+        .divider {
+            margin: 15px 0;
+            border-top: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
-    <h1>Login</h1>
 
-    <form action="/login" method="post">
-        Email: <input type="email" name="email" >
-        <br><br>
-        Senha: <input type="password" name="senha">
-        <br><br>
-        <button type="submit
-        ">entrar</button>
-    </form>
-    <a href="/cadastro">Criar conta</a>
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <button type="submit">ENTRAR</button>
+            
+        </form>
+        
+        <div class="divider"></div>
+
+        <div class="options">
+            <a href="/cadastro" class="footer-link">Não tem uma conta? <strong>Criar conta</strong></a>
+        </div>
+    </div>
+
 </body>
 </html>
