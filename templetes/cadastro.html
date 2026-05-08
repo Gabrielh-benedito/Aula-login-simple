@@ -111,6 +111,10 @@
             <button type="submit">CADASTRAR</button>
         </form>
 
+        {% if erro %}
+            <P style="color: #E30613;">{{ erro }}</P>
+        {% endif %}
+        <br>
         <a href="/login" class="footer-link">Já tenho conta? Entrar</a>
     </div>
 
